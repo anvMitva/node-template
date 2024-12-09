@@ -16,7 +16,7 @@ const skip = () => {
 // It will log the user's username if available in `req.user.username`
 const morganMiddleware = morgan(
   (tokens, req, res) => {
-    const username = req.user?.username || "anonymous"; 
+    const username = req.user?.username || "anonymous";  
     return [
       tokens["remote-addr"](req, res),
       "||", username, "||",
